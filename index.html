@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador de Transações</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="background-chart">
+        <canvas id="bitcoinChart"></canvas>
+    </div>
+    <div class="container">
+        <h1>Validador de Transações</h1>
+        <form id="transactionForm">
+            <div class="form-group">
+                <label for="chain">Chain:</label>
+                <select id="chain" required>
+                    <option value="" disabled selected>Selecione uma Chain</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="token">Token:</label>
+                <input type="text" id="tokeninput" placeholder="Ex: ETH, XDC" required>
+            </div>
+            <div class="form-group">
+                <label for="txHash">TX Hash:</label>
+                <input type="text" id="txHashinput" placeholder="Ex: 0x123abc..." required>
+            </div>
+            <div class="form-group">
+                <label for="expectedDestination">Destino Esperado:</label>
+                <input type="text" id="expectedDestinationinput" placeholder="Ex: 0x456def..." required>
+            </div>
+            <div class="form-group">
+                <label for="expectedAmount">Montante Esperado:</label>
+                <input type="number" id="expectedAmountinput" placeholder="Ex: 10.5" step="0.000001" required>
+            </div>
+            <button type="submit" class="submit-btn">Validar Transação</button>
+        </form>
+        <div id="result" class="result" style="display: none;"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

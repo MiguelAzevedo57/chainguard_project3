@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #0d1b2a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.background-chart {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+.background-chart canvas {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    background: #363e4d;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    z-index: 1;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.form-group select,
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #555;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: #2d3440;
+    color: #ffffff;
+}
+
+.form-group select:focus,
+.form-group input:focus {
+    outline: none;
+    border-color: #FF1453;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #FF1453;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #e0003d;
+}
+
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 6px;
+    min-height: 100px;
+    font-family: monospace;
+    white-space: pre-wrap;
+    overflow-y: auto;
+    max-height: 300px;
+    background-color: #2d3440;
+    border: 1px solid #555;
+    color: #ffffff;
+    display: none;
+}
+
+.result.success {
+    background-color: rgba(40, 167, 69, 0.2);
+    border: 1px solid #28a745;
+    color: #28a745;
+}
+
+.result.error {
+    background-color: rgba(220, 53, 69, 0.2);
+    border: 1px solid #dc3545;
+    color: #dc3545;
+}
+.result.wrong_data{
+    background-color: rgba(220, 53, 69, 0.2);
+    border: 1px solid #ebbf73;
+    color: #ebbf73;
+}
