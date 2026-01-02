@@ -1,0 +1,30 @@
+{
+  "title": "Validador de Transacoes",
+  "form": {
+    "chain": "Chain:",
+    "chainPlaceholder": "Selecione uma Chain",
+    "token": "Token:",
+    "tokenPlaceholder": "Ex: ETH, XDC",
+    "txHash": "TX Hash:",
+    "txHashPlaceholder": "Ex: 0x123abc...",
+    "expectedDestination": "Destino Esperado:",
+    "expectedDestinationPlaceholder": "Ex: 0x456def...",
+    "expectedAmount": "Montante Esperado:",
+    "expectedAmountPlaceholder": "Ex: 10.5",
+    "submitBtn": "Validar Transacao"
+  },
+  "result": {
+    "validating": "A validar transacao...",
+    "notFound": "Transacao nao encontrada!",
+    "wrongData": "Transacao encontrada com dados diferentes!",
+    "valid": "Transacao Valida e Confirmada!",
+    "error": "Erro Tecnico:",
+    "expected": "Esperado",
+    "real": "Real (Blockchain)",
+    "dest": "Dest:",
+    "value": "Valor:",
+    "ok": "OK",
+    "wrong": "<-errado"
+  },
+  "language": "Portugues"
+}

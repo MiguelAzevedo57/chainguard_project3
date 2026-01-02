@@ -5,6 +5,42 @@
     font-family: 'Roboto', sans-serif;
 }
 
+.language-selector {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    background: rgba(54, 62, 77, 0.9);
+    padding: 10px 15px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.language-selector label {
+    color: #ffffff;
+    font-weight: 500;
+    margin: 0;
+    font-size: 14px;
+}
+
+.language-selector select {
+    padding: 6px 10px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: #2d3440;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.language-selector select:focus {
+    outline: none;
+    border-color: #FF1453;
+}
+
 body {
     background-color: #0d1b2a;
     display: flex;

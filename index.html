@@ -4,44 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Validador de Transações</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">      
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="script.js"></script>
+    <script src="translations.js"></script>
 </head>
 <body>
+    <div class="language-selector">
+        <label for="languageSelect" data-i18n="language">Language:</label>
+        <select id="languageSelect">
+            <option value="pt" data-i18n-option="lang.portuguese">Português</option>
+            <option value="en" data-i18n-option="lang.english">English</option>
+            <option value="es" data-i18n-option="lang.spanish">Español</option>
+        </select>
+    </div>
     <div class="background-chart">
         <canvas id="bitcoinChart"></canvas>
     </div>
     <div class="container">
-        <h1>Validador de Transações</h1>
+        <h1 data-i18n="form.title">Validador de Transações</h1>
         <form id="transactionForm">
             <div class="form-group">
-                <label for="chain">Chain:</label>
+                <label for="chain" data-i18n="form.chain">Chain:</label>
                 <select id="chain" required>
-                    <option value="" disabled selected>Selecione uma Chain</option>
+                    <option value="bitcoin" data-i18n-option="form.chain.bitcoin">Bitcoin</option>
+                    <option value="ethereum" data-i18n-option="form.chain.ethereum">Ethereum</option>
+                    <option value="litecoin" data-i18n-option="form.chain.litecoin">Litecoin</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="token">Token:</label>
-                <input type="text" id="tokeninput" placeholder="Ex: ETH, XDC" required>
+                <label for="txHash" data-i18n="form.txhash">TX Hash:</label>
+                <input type="text" id="txHashinput" placeholder="Insira o hash" data-i18n="form.txhash.placeholder" required>
             </div>
             <div class="form-group">
-                <label for="txHash">TX Hash:</label>
-                <input type="text" id="txHashinput" placeholder="Ex: 0x123abc..." required>
+                <label for="expectedDestination" data-i18n="form.destination">Destino Esperado:</label>
+                <input type="text" id="expectedDestinationinput" placeholder="Insira o endereço" data-i18n="form.destination.placeholder" required>
             </div>
             <div class="form-group">
-                <label for="expectedDestination">Destino Esperado:</label>
-                <input type="text" id="expectedDestinationinput" placeholder="Ex: 0x456def..." required>
+                <label for="expectedAmount" data-i18n="form.amount">Montante Esperado:</label>
+                <input type="number" id="expectedAmountinput" placeholder="Insira o valor" data-i18n="form.amount.placeholder" step="0.000001" required>        
             </div>
-            <div class="form-group">
-                <label for="expectedAmount">Montante Esperado:</label>
-                <input type="number" id="expectedAmountinput" placeholder="Ex: 10.5" step="0.000001" required>
-            </div>
-            <button type="submit" class="submit-btn">Validar Transação</button>
+            <button type="submit" class="submit-btn" data-i18n="form.validate">Validar Transação</button>
         </form>
         <div id="result" class="result" style="display: none;"></div>
     </div>
+
+    <!-- i18next bundle -->
+    <script src="script.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

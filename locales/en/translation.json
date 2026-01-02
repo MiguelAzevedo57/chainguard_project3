@@ -1,0 +1,30 @@
+{
+  "title": "Transaction Validator",
+  "form": {
+    "chain": "Chain:",
+    "chainPlaceholder": "Select a Chain",
+    "token": "Token:",
+    "tokenPlaceholder": "Ex: ETH, XDC",
+    "txHash": "TX Hash:",
+    "txHashPlaceholder": "Ex: 0x123abc...",
+    "expectedDestination": "Expected Destination:",
+    "expectedDestinationPlaceholder": "Ex: 0x456def...",
+    "expectedAmount": "Expected Amount:",
+    "expectedAmountPlaceholder": "Ex: 10.5",
+    "submitBtn": "Validate Transaction"
+  },
+  "result": {
+    "validating": "Validating transaction...",
+    "notFound": "Transaction not found!",
+    "wrongData": "Transaction found with different data!",
+    "valid": "Valid and Confirmed Transaction!",
+    "error": "Technical Error:",
+    "expected": "Expected",
+    "real": "Real (Blockchain)",
+    "dest": "Dest:",
+    "value": "Value:",
+    "ok": "OK",
+    "wrong": "<-wrong"
+  },
+  "language": "English"
+}
